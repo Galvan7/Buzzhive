@@ -12,7 +12,7 @@ function Signin() {
     const [error,setError] = useState("")
     const { isFetching, dispatch } = useContext(AuthContext)
 
-    const API_URL = "http://localhost:5000/"
+    const API_URL = "https://buzzhive.onrender.com/"
 
     const loginCall = async (userCredential, dispatch) => {
         dispatch({ type: "LOGIN_START" });

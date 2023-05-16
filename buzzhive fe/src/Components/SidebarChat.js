@@ -9,7 +9,7 @@ function SidebarChat({ chatroomtile, currentUser }) {
     const [online, setOnline] = useState(false);
     const socket = useRef()
 
-    const API_URL = "http://localhost:5000/"
+    const API_URL = "https://buzzhive.onrender.com/"
 
     useEffect(() => {
         socket.current = io(API_URL);

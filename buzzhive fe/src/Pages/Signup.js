@@ -15,7 +15,7 @@ function Signup() {
   const history = useHistory();
   let mounted = true;
 
-  const API_URL = "http://localhost:5000/";
+  const API_URL = "https://buzzhive.onrender.com/";
 
   useEffect(() => {
     return () => {

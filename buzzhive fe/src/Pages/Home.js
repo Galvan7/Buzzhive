@@ -36,7 +36,7 @@ function Home() {
   const scrollRef = useRef();
   const socket = useRef();
 
-  const API_URL = "http://localhost:5000/"
+  const API_URL = "https://buzzhive.onrender.com/"
 
   /* Making Messages Realtime */
 

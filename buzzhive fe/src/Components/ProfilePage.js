@@ -77,7 +77,7 @@ function ProfilePage({ toggler, togglestate }) {
   const [photo, setPhoto] = useState("");
   const [error, setError] = useState("");
 
-  const API_URL = "http://localhost:5000/";
+  const API_URL = "https://buzzhive.onrender.com/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

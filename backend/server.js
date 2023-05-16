@@ -91,17 +91,17 @@ mongoose.connect(
   }
 );
 
-app.get("/",(req,res)=>{
-  res.send("Welcome to the Buzzhive API")
-})
+// app.get("/",(req,res)=>{
+//   res.send("Welcome to the Buzzhive API")
+// })
 
 // serving frontend
-// const __dirname = path.resolve();
-// app.use(express.static(path.join(__dirname, '../buzzhive fe/build')));
-// console.log(path.join(__dirname, '../buzzhive fe/build'))
-// app.get("*",function(req,res){
-//   res.sendFile(path.join(__dirname, '../buzzhive fe/build', 'index.html'));
-// });
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '../buzzhive fe/build')));
+console.log(path.join(__dirname, '../buzzhive fe/build'))
+app.get("*",function(req,res){
+  res.sendFile(path.join(__dirname, '../buzzhive fe/build', 'index.html'));
+});
 /* Port Listening In */
 server.listen(port, () => {
   console.log("Server is running in PORT 5000");
