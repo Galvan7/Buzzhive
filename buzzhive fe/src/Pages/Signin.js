@@ -7,9 +7,9 @@ import { AuthContext } from '../Context/AuthContext'
 
 function Signin() {
 
-    const [email, setEmail] = useState()   /* Instead of Using useState hook we can use useRef and keep ref in the required input field for getting data */
+    const [email, setEmail] = useState()
     const [password, setPassword] = useState()
-    const [error,setError] = useState("")
+    const [error, setError] = useState("")
     const { isFetching, dispatch } = useContext(AuthContext)
 
     const API_URL = "https://buzzhive.onrender.com/"
@@ -17,10 +17,9 @@ function Signin() {
     const loginCall = async (userCredential, dispatch) => {
         dispatch({ type: "LOGIN_START" });
         try {
-            const res = await axios.post(API_URL+"api/auth/signin", userCredential);
+            const res = await axios.post(API_URL + "api/auth/signin", userCredential);
             dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
-        }
-        catch (err) {
+        } catch (err) {
             dispatch({ type: "LOGIN_FAILURE", payload: err })
             setError("Wrong Password Or Username")
         }
@@ -32,8 +31,8 @@ function Signin() {
     }
 
     return (
-        <div className='signin-container'>
-            <div className="signin-card">
+        <div className='signin-container' style={{ background: 'linear-gradient(135deg, #0074D9, #FF4136)', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="signin-card" style={{ zIndex: 1 }}>
                 <form onSubmit={handleForm}>
                     <h2 className="signin-title"> Log in</h2>
                     <p className="line"></p>

@@ -80,7 +80,7 @@ app.use("/photo", express.static("images"));
 
 /* Database Connection */
 mongoose.connect(
-  process.env.MONGO_URL,
+  "mongodb+srv://amangoswami2k3:Love%4022&12@cluster0.sgyjckv.mongodb.net/records",
   {
     useCreateIndex: true,
     useNewUrlParser: true,
