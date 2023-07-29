@@ -2,8 +2,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  /* background-color: #316af3; */
-  background-image: url('5264188.jpg');
+  background: linear-gradient(135deg, #0074D9, #FF4136);
   position: relative;
 }
 
